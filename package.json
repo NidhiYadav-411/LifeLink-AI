@@ -5,9 +5,9 @@
   "type": "module",
   "description": "LifeLink AI - Intelligent Blood Donation & Emergency Response Platform",
   "scripts": {
-    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "dev": "concurrently -k -p \"[{name}]\" -n \"SERVER,CLIENT\" -c \"yellow.bold,cyan.bold\" \"npm run server\" \"npm run client\"",
     "client": "npm run dev --prefix client",
-    "server": "npm run dev --prefix server",
+    "server": "npm run start --prefix server",
     "seed": "node server/src/database/initDb.js",
     "test": "node --test server/tests/*.test.js",
     "install:all": "npm install && npm install --prefix server && npm install --prefix client"
