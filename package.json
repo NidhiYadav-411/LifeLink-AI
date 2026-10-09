@@ -1,0 +1,30 @@
+{
+  "name": "lifelink-ai",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "LifeLink AI - Intelligent Blood Donation & Emergency Response Platform",
+  "scripts": {
+    "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
+    "client": "npm run dev --prefix client",
+    "server": "npm run dev --prefix server",
+    "seed": "node server/src/database/initDb.js",
+    "test": "node --test server/tests/*.test.js",
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "keywords": [
+    "blood-donation",
+    "healthcare",
+    "emergency-response",
+    "matching-algorithm",
+    "react",
+    "vite",
+    "nodejs",
+    "express"
+  ],
+  "author": "LifeLink AI Team",
+  "license": "MIT"
+}

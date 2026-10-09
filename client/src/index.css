@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-white text-brand-text font-sans antialiased min-h-screen;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #FCE9E7;
+}
+::-webkit-scrollbar-thumb {
+  background: #F2A099;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #E0443A;
+}
+
+/* Pulse animation for emergency badges */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.03); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s infinite ease-in-out;
+}
